@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exposed APPLE PRODUCTS Zero-Days</title>
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --text-color: #00ff00;
+            --table-bg: #111;
+            --table-border: #444;
+            --link-color: #00ffff;
+            --header-bg: #222;
+        }
+        body {
+            font-family: 'Courier New', monospace;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        h1, h2 {
+            color: var(--text-color);
+            border-bottom: 1px solid var(--text-color);
+            padding-bottom: 10px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+        }
+        .search-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        #search {
+            background-color: var(--header-bg);
+            color: var(--text-color);
+            border: 1px solid var(--text-color);
+            padding: 10px;
+            width: 50%;
+            font-family: 'Courier New', monospace;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: var(--table-bg);
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.1);
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--table-border);
+        }
+        th {
+            background-color: var(--header-bg);
+        }
+        tr:hover {
+            background-color: #2a2a2a;
+        }
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #888;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>EXPOSED APPLE PRODUCTS ZERO-DAYS</h1>
+
+    <div class="search-container">
+        <input type="text" id="search" placeholder="Search for CVE ID or description..." onkeyup="searchTable()">
+    </div>
+
+    <h2>2025 iOS Zero-Days</h2>
+    <table id="table2025">
+        <thead>
+            <tr>
+                <th>CVE ID</th>
+                <th>Description</th>
+                <th>Component</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="zero/CVE-2025-43300.html">CVE-2025-43300</a></td>
+                <td>Out-of-bounds write in ImageIO, leading to memory corruption when processing malicious images.</td>
+                <td>iOS, iPadOS, macOS</td>
+            </tr>
+            <tr>
+                <td><a href="zero/CVE-2025-24085.html">CVE-2025-24085</a></td>
+                <td>Use-after-free in CoreMedia, allowing code execution via malicious media files.</td>
+                <td>iOS 17.2 and earlier</td>
+            </tr>
+            <tr>
+                <td><a href="zero/CVE-2025-24200.html">CVE-2025-24200</a></td>
+                <td>Authorization issue, allowing USB Restricted Mode bypass on locked devices.</td>
+                <td>iOS 17.2 and earlier</td>
+            </tr>
+            <tr>
+                <td><a href="zero/CVE-2025-24201.html">CVE-2025-24201</a></td>
+                <td>Memory corruption in WebKit, exploited in targeted attacks.</td>
+                <td>iOS, iPadOS, macOS</td>
+            </tr>
+            <tr>
+                <td><a href="zero/CVE-2025-31200.html">CVE-2025-31200</a></td>
+                <td>Memory corruption in CoreAudio, triggered by maliciously crafted media files.</td>
+                <td>iOS, iPadOS, macOS</td>
+            </tr>
+            <tr>
+                <td><a href="zero/CVE-2025-31201.html">CVE-2025-31201</a></td>
+                <td>Bypass of Pointer Authentication Code (PAC) in RPAC, allowing arbitrary read/write.</td>
+                <td>iOS, iPadOS, macOS</td>
+            </tr>
+            <tr>
+                <td><a href="zero/CVE-2025-43200.html">CVE-2025-43200</a></td>
+                <td>Memory corruption vulnerability, details not fully disclosed.</td>
+                <td>iOS, iPadOS, macOS</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>2024 iOS Zero-Days</h2>
+    <table id="table2024">
+        <thead>
+            <tr>
+                <th>CVE ID</th>
+                <th>Description</th>
+                <th>Component</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="zero/CVE-2024-23225.html">CVE-2024-23225</a></td>
+                <td>Memory corruption in kernel, allowing bypass of kernel memory protections.</td>
+                <td>iOS 17.4 and earlier</td>
+            </tr>
+            <tr>
+                <td><a href="zero/CVE-2024-23296.html">CVE-2024-23296</a></td>
+                <td>Memory corruption in kernel, allowing bypass of kernel memory protections.</td>
+                <td>iOS 17.4 and earlier</td>
+            </tr>
+            <tr>
+                <td><a href="zero/CVE-2024-41061.html">CVE-2024-41061</a></td>
+                <td>Zero-click exploit chain (BLASTPASS) used to install Pegasus spyware.</td>
+                <td>iOS 16.7 and earlier</td>
+            </tr>
+            <tr>
+                <td><a href="zero/CVE-2024-41064.html">CVE-2024-41064</a></td>
+                <td>Buffer overflow in ImageIO, triggered by maliciously crafted images.</td>
+                <td>iOS 16.7 and earlier</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>2023 iOS Zero-Days</h2>
+    <table id="table2023">
+        <thead>
+            <tr>
+                <th>CVE ID</th>
+                <th>Description</th>
+                <th>Component</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="zero/CVE-2023-41992.html">CVE-2023-41992</a></td>
+                <td>Zero-day used in Operation Triangulation spyware campaign.</td>
+                <td>iOS 16.7 and earlier</td>
+            </tr>
+            <tr>
+                <td><a href="zero/CVE-2023-41991.html">CVE-2023-41991</a></td>
+                <td>Zero-day used in Operation Triangulation spyware campaign.</td>
+                <td>iOS 16.7 and earlier</td>
+            </tr>
+            <tr>
+                <td><a href="zero/CVE-2023-41993.html">CVE-2023-41993</a></td>
+                <td>Zero-day used in Operation Triangulation spyware campaign.</td>
+                <td>iOS 16.7 and earlier</td>
+            </tr>
+            <tr>
+                <td><a href="zero/CVE-2023-42916.html">CVE-2023-42916</a></td>
+                <td>Out-of-bounds read in WebKit, allowing access to sensitive information.</td>
+                <td>iOS 17.1.1 and earlier</td>
+            </tr>
+            <tr>
+                <td><a href="zero/CVE-2023-42917.html">CVE-2023-42917</a></td>
+                <td>Memory corruption in WebKit, allowing arbitrary code execution.</td>
+                <td>iOS 17.1.1 and earlier</td>
+            </tr>
+            <tr>
+                <td><a href="zero/CVE-2023-38606.html">CVE-2023-38606</a></td>
+                <td>Zero-day exploited in the wild, details not fully disclosed.</td>
+                <td>iOS 15.7.1 and earlier</td>
+            </tr>
+            <tr>
+                <td><a href="zero/CVE-2023-32434.html">CVE-2023-32434</a></td>
+                <td>Used to deploy TriangleDB spying implants.</td>
+                <td>iOS 15.7.1 and earlier</td>
+            </tr>
+            <tr>
+                <td><a href="zero/CVE-2023-32439.html">CVE-2023-32439</a></td>
+                <td>Used to deploy TriangleDB spying implants.</td>
+                <td>iOS 15.7.1 and earlier</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>2021–2020 iOS Zero-Days</h2>
+    <table id="table2020">
+        <thead>
+            <tr>
+                <th>CVE ID</th>
+                <th>Description</th>
+                <th>Component</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="zero/CVE-2021-30860.html">CVE-2021-30860</a></td>
+                <td>Zero-day vulnerabilities reported by security researcher, details not fully disclosed.</td>
+                <td>iOS 15.0 and earlier</td>
+            </tr>
+            <tr>
+                <td><a href="zero/CVE-2020-27930.html">CVE-2020-27930</a></td>
+                <td>Zero-day vulnerabilities patched in iOS 14.2, exploited in targeted attacks.</td>
+                <td>iOS 14.2 and earlier</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <footer>
+        <p>Made by <strong>Aryan Giri</strong></p>
+    </footer>
+
+    <script>
+        function searchTable() {
+            const input = document.getElementById("search");
+            const filter = input.value.toUpperCase();
+            const tables = ["table2025", "table2024", "table2023", "table2020"];
+
+            tables.forEach(tableId => {
+                const table = document.getElementById(tableId);
+                const tr = table.getElementsByTagName("tr");
+
+                for (let i = 1; i < tr.length; i++) {
+                    let found = false;
+                    const td = tr[i].getElementsByTagName("td");
+
+                    for (let j = 0; j < td.length; j++) {
+                        if (td[j]) {
+                            const txtValue = td[j].textContent || td[j].innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                found = true;
+                                break;
+                            }
+                        }
+                    }
+
+                    tr[i].style.display = found ? "" : "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>
